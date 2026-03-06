@@ -1,0 +1,17 @@
+# Gitleaks Ignore File
+# Add fingerprints of known false positives here
+
+# Build artifacts (Next.js cache) - these contain RSC encryption keys which are not sensitive
+.next/cache/.rscinfo:generic-api-key:*
+.next/cache/.previewinfo:generic-api-key:*
+
+# Webpack build artifacts - may contain compiled code with JWTs from env vars
+.next/cache/webpack/**:jwt:*
+.next/cache/webpack/**:generic-api-key:*
+
+# Test files - UUIDs that look like API keys but are just test data
+docs/WEEK2-SESSION-SUMMARY.md:generic-api-key:*
+scripts/setup-demo-user.sql:generic-api-key:*
+
+# Example/truncated tokens in documentation
+docs/03-API-SPEC-PART2.md:generic-api-key:*

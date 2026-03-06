@@ -1,0 +1,22 @@
+
+═══════════════════════════════════════════════════════
+   OS PLACES TEST - WITH PERSISTENT AUTH
+═══════════════════════════════════════════════════════
+
+📋 This script will:
+1. Open browser with persistent session
+2. Let you log in (auth will be saved)
+3. Navigate and test OS Places automatically
+
+⏱️  Starting in 3 seconds...
+
+🔐 Please log in now...
+   Waiting for dashboard URL...
+
+⏱️  Timeout - checking if we can access customers anyway...
+
+📄 Navigating to customers page...
+❌ Still not authenticated. Auth state not working.
+   Browser will stay open - please log in manually and test.
+   When done, close the browser.
+

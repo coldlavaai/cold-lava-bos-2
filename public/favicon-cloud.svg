@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="cloudBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#93C5FD"/>
+      <stop offset="60%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </radialGradient>
+  </defs>
+  <!-- Background circle for visibility on all tabs -->
+  <circle cx="32" cy="32" r="30" fill="url(#cloudBg)" opacity="0.95"/>
+  <!-- Cloud shape in white -->
+  <path
+    fill="#FFFFFF"
+    d="M20 38h24a8 8 0 0 0 0-16 10 10 0 0 0-19-4A7 7 0 0 0 20 38z"
+  />
+</svg>

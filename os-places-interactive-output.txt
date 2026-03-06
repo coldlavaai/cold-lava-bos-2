@@ -1,0 +1,60 @@
+
+═══════════════════════════════════════════════════════
+   OS PLACES ADDRESS MATCHING - PRODUCTION TEST
+═══════════════════════════════════════════════════════
+
+📋 INSTRUCTIONS:
+1. A browser window will open
+2. Please LOG IN manually
+3. After login, the script will:
+   - Navigate to customers page
+   - Search for Oliver Tatler (CH60 0DG)
+   - Open the customer detail
+   - Click "View Solar Analysis"
+   - Capture console logs and screenshot
+
+⏱️  Opening browser in 3 seconds...
+
+🔐 Waiting for you to log in...
+   (Script will auto-continue when you reach the dashboard)
+
+⚠️  Timeout waiting for login. Proceeding anyway...
+
+📄 Step 1: Navigating to customers page...
+🔍 Step 2: Searching for Oliver Tatler / CH60 0DG...
+   ⚠️ Could not find search input, trying to click on customer directly...
+👤 Step 3: Opening customer detail...
+   ⚠️ Could not click customer row: locator.click: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('text=Oliver Tatler, text=CH60 0DG, [role="row"]:has-text("Oliver")').first()[22m
+
+   Screenshot saved: debug-customers-page.png
+☀️  Step 4: Looking for Solar Analysis button...
+   ⚠️ Solar Analysis button not found: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('button:has-text("Solar Analysis"), button:has-text("View Solar")').first() to be visible[22m
+
+   Screenshot saved: debug-customer-detail.png
+📸 Step 5: Taking screenshot of modal...
+   Screenshot saved: os-places-test-modal.png
+
+
+═══════════════════════════════════════════════════════
+   CONSOLE LOG ANALYSIS
+═══════════════════════════════════════════════════════
+
+⚠️  No OS Places logs found.
+
+📋 Last 30 console messages:
+
+   [verbose] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o
+   [log] [CustomersPage] useCustomers state {page: 1, limit: 20, isLoading: true, error: null, dataCount: 0}
+   [error] Failed to load resource: the server responded with a status of 401 ()
+   [verbose] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o
+
+═══════════════════════════════════════════════════════
+   TEST COMPLETE
+═══════════════════════════════════════════════════════
+
+Browser will remain open for 30 seconds for inspection...
+

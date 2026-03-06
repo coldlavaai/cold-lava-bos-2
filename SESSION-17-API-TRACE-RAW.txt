@@ -1,0 +1,188 @@
+=== Starting Production Browser Trace ===
+
+1. Navigating to login page...
+2. Logging in as admin@demo.com...
+   ✅ Logged in
+
+3. Visiting /customers page...
+   ✅ Loaded
+
+4. Visiting /jobs page...
+   ✅ Loaded
+
+5. Visiting /settings/users page...
+   ✅ Loaded
+
+6. Visiting dashboard...
+   ✅ Loaded
+
+
+=== TRACE RESULTS ===
+
+## Console Messages
+
+1. [error] Auth error: TypeError: Failed to fetch
+    at https://cl-solarbos-jan-26.vercel.app/_next/static/chunks/app/layout-988a1e297fa4e38f.js:1:8738
+2. [error] Failed to load resource: the server responded with a status of 404 ()
+3. [error] Failed to load resource: the server responded with a status of 404 ()
+4. [error] Failed to load resource: the server responded with a status of 404 ()
+5. [error] Failed to load resource: the server responded with a status of 404 ()
+6. [error] Failed to load resource: the server responded with a status of 404 ()
+7. [error] Failed to load resource: the server responded with a status of 404 ()
+8. [error] Failed to load resource: the server responded with a status of 404 ()
+9. [error] Failed to load resource: the server responded with a status of 500 ()
+10. [error] Failed to load resource: the server responded with a status of 404 ()
+11. [error] Failed to load resource: the server responded with a status of 404 ()
+12. [error] Failed to load resource: the server responded with a status of 404 ()
+13. [error] Failed to load resource: the server responded with a status of 404 ()
+14. [error] Failed to load resource: the server responded with a status of 404 ()
+15. [error] Failed to load resource: the server responded with a status of 404 ()
+16. [error] Failed to load resource: the server responded with a status of 404 ()
+17. [error] Failed to load resource: the server responded with a status of 500 ()
+18. [error] Failed to load resource: the server responded with a status of 500 ()
+19. [error] Failed to load resource: the server responded with a status of 404 ()
+20. [error] Failed to load resource: the server responded with a status of 404 ()
+21. [error] Failed to load resource: the server responded with a status of 404 ()
+22. [error] Failed to load resource: the server responded with a status of 404 ()
+23. [error] Failed to load resource: the server responded with a status of 404 ()
+24. [error] Failed to load resource: the server responded with a status of 404 ()
+25. [error] Failed to load resource: the server responded with a status of 404 ()
+26. [error] Failed to load resource: the server responded with a status of 500 ()
+27. [error] Failed to load resource: the server responded with a status of 500 ()
+28. [error] Failed to load resource: the server responded with a status of 404 ()
+29. [error] Failed to load resource: the server responded with a status of 404 ()
+30. [error] Failed to load resource: the server responded with a status of 404 ()
+31. [error] Failed to load resource: the server responded with a status of 404 ()
+32. [error] Failed to load resource: the server responded with a status of 404 ()
+33. [error] Failed to load resource: the server responded with a status of 404 ()
+34. [error] Failed to load resource: the server responded with a status of 404 ()
+35. [error] Failed to load resource: the server responded with a status of 500 ()
+36. [error] Failed to load resource: the server responded with a status of 500 ()
+37. [error] Failed to load resource: the server responded with a status of 500 ()
+38. [error] Failed to load resource: the server responded with a status of 500 ()
+
+
+## Cookies
+
+- sb-sasudhihvdsbvjblxorb-auth-token: base64-eyJhY2Nlc3Nfd... (2522 chars)
+- sb-tenant-id: a4c4b3c3-3302-45cb-a... (36 chars)
+- sb-user-role: admin... (5 chars)
+- sb-user-id: 18acf1dd-1067-432a-9... (36 chars)
+
+
+## API Requests
+
+
+### /api/tenant
+❌ No requests captured
+
+### /api/users (Request 1)
+- Method: GET
+- Status: 200
+- URL: https://cl-solarbos-jan-26.vercel.app/api/users
+- Response Body (truncated):
+```
+{"data":[{"id":"d7c16692-6b61-4224-8ca5-30a9704e53a1","tenant_id":"a4c4b3c3-3302-45cb-a129-9777198cd2d1","email":"admin@demo.com","name":"Admin User","role":"admin","status":"active","created_at":"2026-01-09T17:36:31.251769+00:00","updated_at":"2026-01-09T17:36:31.251769+00:00"}],"meta":{"pagination":{"page":1,"limit":50,"total":1,"totalPages":1}}}
+```
+
+### /api/customers (Request 1)
+- Method: GET
+- Status: 200
+- URL: https://cl-solarbos-jan-26.vercel.app/api/customers?search=&page=1&limit=20
+- Response Body (truncated):
+```
+{"data":[{"id":"f1405932-a372-49db-8aef-98765c7f4c2b","tenant_id":"a4c4b3c3-3302-45cb-a129-9777198cd2d1","name":"Test Customer 1","email":"customer1@test.com","phone":"+44 20 7946 0958","address_line_1":"123 Solar Street","address_line_2":null,"city":"London","postcode":"SW1A 1AA","source_id":null,"notes":"E2E test customer 1","created_by":null,"created_at":"2026-01-11T13:02:20.486805+00:00","updated_at":"2026-01-11T13:02:20.486805+00:00","source":null},{"id":"fc089ea4-7ca6-414c-af87-73b153b71e7
+```
+
+### /api/customers (Request 2)
+- Method: GET
+- Status: 200
+- URL: https://cl-solarbos-jan-26.vercel.app/api/customers?search=&limit=20
+- Response Body (truncated):
+```
+{"data":[{"id":"f1405932-a372-49db-8aef-98765c7f4c2b","tenant_id":"a4c4b3c3-3302-45cb-a129-9777198cd2d1","name":"Test Customer 1","email":"customer1@test.com","phone":"+44 20 7946 0958","address_line_1":"123 Solar Street","address_line_2":null,"city":"London","postcode":"SW1A 1AA","source_id":null,"notes":"E2E test customer 1","created_by":null,"created_at":"2026-01-11T13:02:20.486805+00:00","updated_at":"2026-01-11T13:02:20.486805+00:00","source":null},{"id":"fc089ea4-7ca6-414c-af87-73b153b71e7
+```
+
+### /api/customers (Request 3)
+- Method: GET
+- Status: 200
+- URL: https://cl-solarbos-jan-26.vercel.app/api/customers?search=&limit=20
+- Response Body (truncated):
+```
+{"data":[{"id":"f1405932-a372-49db-8aef-98765c7f4c2b","tenant_id":"a4c4b3c3-3302-45cb-a129-9777198cd2d1","name":"Test Customer 1","email":"customer1@test.com","phone":"+44 20 7946 0958","address_line_1":"123 Solar Street","address_line_2":null,"city":"London","postcode":"SW1A 1AA","source_id":null,"notes":"E2E test customer 1","created_by":null,"created_at":"2026-01-11T13:02:20.486805+00:00","updated_at":"2026-01-11T13:02:20.486805+00:00","source":null},{"id":"fc089ea4-7ca6-414c-af87-73b153b71e7
+```
+
+### /api/jobs (Request 1)
+- Method: GET
+- Status: 200
+- URL: https://cl-solarbos-jan-26.vercel.app/api/jobs?page=1&limit=20
+- Response Body (truncated):
+```
+{"data":[{"id":"49f081c4-9d17-42de-b71f-37390f71437d","tenant_id":"a4c4b3c3-3302-45cb-a129-9777198cd2d1","customer_id":"f1405932-a372-49db-8aef-98765c7f4c2b","job_number":"TEST-001","current_stage_id":"49c51309-893f-4065-911c-9659eef98b77","assigned_to":null,"estimated_value":8500,"system_size_kwp":4.2,"source":null,"tags":["TEST"],"notes":"E2E test job 1 - Lead stage","stage_changed_at":"2026-01-11T13:02:20.526+00:00","created_at":"2026-01-11T13:02:20.63682+00:00","updated_at":"2026-01-11T13:02
+```
+
+### /api/jobs (Request 2)
+- Method: GET
+- Status: 200
+- URL: https://cl-solarbos-jan-26.vercel.app/api/jobs
+- Response Body (truncated):
+```
+{"data":[{"id":"49f081c4-9d17-42de-b71f-37390f71437d","tenant_id":"a4c4b3c3-3302-45cb-a129-9777198cd2d1","customer_id":"f1405932-a372-49db-8aef-98765c7f4c2b","job_number":"TEST-001","current_stage_id":"49c51309-893f-4065-911c-9659eef98b77","assigned_to":null,"estimated_value":8500,"system_size_kwp":4.2,"source":null,"tags":["TEST"],"notes":"E2E test job 1 - Lead stage","stage_changed_at":"2026-01-11T13:02:20.526+00:00","created_at":"2026-01-11T13:02:20.63682+00:00","updated_at":"2026-01-11T13:02
+```
+
+### /api/job-stages (Request 1)
+- Method: GET
+- Status: 500
+- URL: https://cl-solarbos-jan-26.vercel.app/api/job-stages
+- Response Body (truncated):
+```
+{"error":"invalid input syntax for type uuid: \"[object Promise]\""}
+```
+
+### /api/job-stages (Request 2)
+- Method: GET
+- Status: 500
+- URL: https://cl-solarbos-jan-26.vercel.app/api/job-stages
+- Response Body (truncated):
+```
+{"error":"invalid input syntax for type uuid: \"[object Promise]\""}
+```
+
+### /api/job-stages (Request 3)
+- Method: GET
+- Status: 500
+- URL: https://cl-solarbos-jan-26.vercel.app/api/job-stages
+- Response Body (truncated):
+```
+{"error":"invalid input syntax for type uuid: \"[object Promise]\""}
+```
+
+### /api/job-stages (Request 4)
+- Method: GET
+- Status: 500
+- URL: https://cl-solarbos-jan-26.vercel.app/api/job-stages
+- Response Body (truncated):
+```
+{"error":"invalid input syntax for type uuid: \"[object Promise]\""}
+```
+
+### /api/job-stages (Request 5)
+- Method: GET
+- Status: 500
+- URL: https://cl-solarbos-jan-26.vercel.app/api/job-stages
+- Response Body (truncated):
+```
+{"error":"invalid input syntax for type uuid: \"[object Promise]\""}
+```
+
+### /api/job-stages (Request 6)
+- Method: GET
+- Status: 500
+- URL: https://cl-solarbos-jan-26.vercel.app/api/job-stages
+- Response Body (truncated):
+```
+{"error":"invalid input syntax for type uuid: \"[object Promise]\""}
+```
+
+
+=== Trace Complete ===

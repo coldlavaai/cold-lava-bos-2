@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Solar BOS - Turquoise Color Scheme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+      background: #f8fafc;
+      padding: 20px;
+    }
+    
+    /* Turquoise color scheme from the "Needs" image */
+    :root {
+      --primary: #00CED1;        /* Main turquoise/cyan from image */
+      --primary-dark: #0099A0;   /* Darker shade */
+      --primary-light: #40E0D0;  /* Lighter shade */
+      --navy: #1e3a5f;           /* Dark text/accents */
+      --gold: #F5A623;           /* Keep gold for energy accent */
+    }
+    
+    h1 { color: var(--navy); margin-bottom: 20px; font-size: 24px; }
+    h2 { color: #64748b; font-size: 14px; margin-bottom: 30px; font-weight: 500; }
+    
+    .mockups { display: grid; gap: 30px; }
+    
+    /* Dashboard Card Mock */
+    .dashboard-mock {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    
+    .dashboard-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--primary);
+    }
+    
+    .logo-mock {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    
+    .brand-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    
+    .brand-name span {
+      color: var(--primary);
+    }
+    
+    /* Stats Row */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    
+    .stat-card {
+      padding: 16px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+    }
+    
+    .stat-card.alt {
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+    }
+    
+    .stat-card.gold {
+      background: linear-gradient(135deg, var(--gold) 0%, #d4920a 100%);
+    }
+    
+    .stat-card.navy {
+      background: linear-gradient(135deg, var(--navy) 0%, #0f2337 100%);
+    }
+    
+    .stat-value { font-size: 28px; font-weight: 700; }
+    .stat-label { font-size: 12px; opacity: 0.9; margin-top: 4px; }
+    
+    /* Navigation Mock */
+    .nav-mock {
+      background: white;
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      color: #64748b;
+      font-weight: 500;
+    }
+    
+    .nav-item.active {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+    }
+    
+    .nav-item:hover:not(.active) {
+      background: #f1f5f9;
+    }
+    
+    .nav-icon {
+      width: 20px;
+      height: 20px;
+      background: currentColor;
+      border-radius: 4px;
+      opacity: 0.8;
+    }
+    
+    /* Button Examples */
+    .button-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    
+    .btn {
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+    }
+    
+    .btn-secondary {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      color: var(--primary-dark);
+      border: 2px solid var(--primary-dark);
+    }
+    
+    /* Status Badges */
+    .badge-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    
+    .badge {
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    
+    .badge-primary {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .badge-light {
+      background: rgba(0, 206, 209, 0.15);
+      color: var(--primary-dark);
+    }
+    
+    .badge-dark {
+      background: var(--primary-dark);
+      color: white;
+    }
+    
+    /* Pipeline Stages */
+    .pipeline-mock {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+    
+    .stage-column {
+      min-width: 200px;
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 12px;
+    }
+    
+    .stage-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 3px solid var(--primary);
+    }
+    
+    .stage-header.quoted {
+      border-color: var(--primary-light);
+    }
+    
+    .stage-header.won {
+      border-color: #22c55e;
+    }
+    
+    .stage-count {
+      background: var(--primary);
+      color: white;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+    
+    .job-card-mock {
+      background: white;
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 8px;
+      border-left: 4px solid var(--primary);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    
+    .job-card-mock .name { font-weight: 600; color: var(--navy); }
+    .job-card-mock .value { color: var(--primary); font-weight: 700; margin-top: 4px; }
+    
+    /* Color Palette Display */
+    .palette {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    
+    .swatch {
+      text-align: center;
+    }
+    
+    .swatch-color {
+      width: 80px;
+      height: 80px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+    }
+    
+    .swatch-label {
+      font-size: 11px;
+      color: #64748b;
+    }
+    
+    .swatch-hex {
+      font-family: monospace;
+      font-size: 12px;
+      color: var(--navy);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <h1>☀️ Solar BOS - Turquoise Color Scheme</h1>
+  <h2>Primary: Turquoise Cyan from "Needs" image | Secondary: Darker/Lighter shades</h2>
+  
+  <div class="mockups">
+    <!-- Dashboard Mock -->
+    <div class="dashboard-mock">
+      <div class="dashboard-header">
+        <div class="logo-mock">S</div>
+        <div class="brand-name">Solar<span>BOS</span></div>
+      </div>
+      
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-value">47</div>
+          <div class="stat-label">Active Jobs</div>
+        </div>
+        <div class="stat-card alt">
+          <div class="stat-value">£284k</div>
+          <div class="stat-label">Pipeline Value</div>
+        </div>
+        <div class="stat-card gold">
+          <div class="stat-value">12</div>
+          <div class="stat-label">Quotes Pending</div>
+        </div>
+        <div class="stat-card navy">
+          <div class="stat-value">8</div>
+          <div class="stat-label">This Week</div>
+        </div>
+      </div>
+      
+      <div class="button-row">
+        <button class="btn btn-primary">+ New Job</button>
+        <button class="btn btn-secondary">View Pipeline</button>
+        <button class="btn btn-outline">Export</button>
+      </div>
+      
+      <div class="badge-row">
+        <span class="badge badge-primary">New Lead</span>
+        <span class="badge badge-light">Site Survey</span>
+        <span class="badge badge-dark">Quoted</span>
+      </div>
+    </div>
+    
+    <!-- Navigation Mock -->
+    <div class="nav-mock">
+      <div class="nav-item active">
+        <div class="nav-icon"></div>
+        Dashboard
+      </div>
+      <div class="nav-item">
+        <div class="nav-icon"></div>
+        Pipeline
+      </div>
+      <div class="nav-item">
+        <div class="nav-icon"></div>
+        Jobs
+      </div>
+      <div class="nav-item">
+        <div class="nav-icon"></div>
+        Customers
+      </div>
+      <div class="nav-item">
+        <div class="nav-icon"></div>
+        Equipment
+      </div>
+    </div>
+    
+    <!-- Pipeline Mock -->
+    <div class="dashboard-mock">
+      <h3 style="color: #1e3a5f; margin-bottom: 16px;">Pipeline View</h3>
+      <div class="pipeline-mock">
+        <div class="stage-column">
+          <div class="stage-header">
+            <span>New Lead</span>
+            <span class="stage-count">5</span>
+          </div>
+          <div class="job-card-mock">
+            <div class="name">John Smith</div>
+            <div class="value">£12,500</div>
+          </div>
+          <div class="job-card-mock">
+            <div class="name">Sarah Wilson</div>
+            <div class="value">£8,200</div>
+          </div>
+        </div>
+        <div class="stage-column">
+          <div class="stage-header quoted">
+            <span>Quoted</span>
+            <span class="stage-count">3</span>
+          </div>
+          <div class="job-card-mock" style="border-color: #40E0D0;">
+            <div class="name">Mike Johnson</div>
+            <div class="value">£15,800</div>
+          </div>
+        </div>
+        <div class="stage-column">
+          <div class="stage-header won">
+            <span>Won</span>
+            <span class="stage-count" style="background: #22c55e;">2</span>
+          </div>
+          <div class="job-card-mock" style="border-color: #22c55e;">
+            <div class="name">Emma Davis</div>
+            <div class="value">£22,000</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Color Palette -->
+    <div class="dashboard-mock">
+      <h3 style="color: #1e3a5f; margin-bottom: 16px;">Color Palette</h3>
+      <div class="palette">
+        <div class="swatch">
+          <div class="swatch-color" style="background: #00CED1;"></div>
+          <div class="swatch-label">Primary</div>
+          <div class="swatch-hex">#00CED1</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #0099A0;"></div>
+          <div class="swatch-label">Primary Dark</div>
+          <div class="swatch-hex">#0099A0</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #40E0D0;"></div>
+          <div class="swatch-label">Primary Light</div>
+          <div class="swatch-hex">#40E0D0</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #1e3a5f;"></div>
+          <div class="swatch-label">Navy Text</div>
+          <div class="swatch-hex">#1E3A5F</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #F5A623;"></div>
+          <div class="swatch-label">Gold Accent</div>
+          <div class="swatch-hex">#F5A623</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -189,7 +189,7 @@ function JobCard({ job }: { job: Job }) {
 
   const getStageColor = (name: string) => {
     const lower = name.toLowerCase()
-    if (lower.includes("lead") || lower.includes("enquir")) return "bg-blue-400/15 text-blue-400 ring-blue-400/30"
+    if (lower.includes("lead") || lower.includes("enquir")) return "bg-cyan-400/15 text-cyan-400 ring-cyan-400/30"
     if (lower.includes("survey") || lower.includes("assess")) return "bg-teal-400/15 text-teal-400 ring-teal-400/30"
     if (lower.includes("install") || lower.includes("schedule")) return "bg-purple-400/15 text-purple-400 ring-purple-400/30"
     if (lower.includes("complete") || lower.includes("handover")) return "bg-emerald-400/15 text-emerald-400 ring-emerald-400/30"
@@ -266,7 +266,7 @@ function CallRecordingCard({ recording }: { recording: CallRecording }) {
 
   const directionIcon = recording.direction === "inbound" ? "↙" : "↗"
   const directionColor =
-    recording.direction === "inbound" ? "text-blue-400" : "text-emerald-400"
+    recording.direction === "inbound" ? "text-cyan-400" : "text-emerald-400"
 
   const handlePlayPause = () => {
     if (!recording.audio_url) return
@@ -350,7 +350,7 @@ function CallRecordingCard({ recording }: { recording: CallRecording }) {
             className={cn(
               "flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[9px] transition-colors",
               showTranscript
-                ? "bg-blue-500/15 text-blue-400 hover:bg-blue-500/25"
+                ? "bg-cyan-500/15 text-cyan-400 hover:bg-cyan-500/25"
                 : "bg-white/[0.06] text-white/50 hover:text-white/70"
             )}
           >

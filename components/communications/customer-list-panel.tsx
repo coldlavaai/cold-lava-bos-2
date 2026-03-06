@@ -45,7 +45,7 @@ export function CustomerListPanel({
 }: CustomerListPanelProps) {
   const channelFilters = [
     { value: "all", label: "All" },
-    { value: "sms", label: "SMS", icon: MessageSquare, color: "text-blue-400" },
+    { value: "sms", label: "SMS", icon: MessageSquare, color: "text-cyan-400" },
     { value: "email", label: "Email", icon: Mail, color: "text-white/60" },
     { value: "whatsapp", label: "WA", icon: MessageSquare, color: "text-emerald-400" },
     { value: "call", label: "Calls", icon: Phone, color: "text-white/60" },

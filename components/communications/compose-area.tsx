@@ -123,9 +123,9 @@ export function ComposeArea({
       label: "SMS",
       icon: MessageSquare,
       enabled: canSendSms,
-      color: "text-blue-400",
-      activeBg: "bg-blue-400/15",
-      ring: "ring-blue-400/50",
+      color: "text-cyan-400",
+      activeBg: "bg-cyan-400/15",
+      ring: "ring-cyan-400/50",
     },
     {
       value: "whatsapp" as const,

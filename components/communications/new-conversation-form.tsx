@@ -80,7 +80,7 @@ export function NewConversationForm({
 
   const channels = [
     { value: "email" as const, label: "Email", icon: Mail, enabled: canSendEmail, color: "text-white/70", activeBg: "bg-white/[0.12]" },
-    { value: "sms" as const, label: "SMS", icon: MessageSquare, enabled: canSendSms, color: "text-blue-400", activeBg: "bg-blue-400/15" },
+    { value: "sms" as const, label: "SMS", icon: MessageSquare, enabled: canSendSms, color: "text-cyan-400", activeBg: "bg-cyan-400/15" },
     { value: "whatsapp" as const, label: "WhatsApp", icon: MessageSquare, enabled: canSendWhatsApp, color: "text-emerald-400", activeBg: "bg-emerald-400/15" },
   ]
 

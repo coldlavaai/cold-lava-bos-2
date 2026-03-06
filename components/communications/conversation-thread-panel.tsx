@@ -316,7 +316,7 @@ function MessageBubble({
       case "sent":
         return <Check className="h-3 w-3 text-white/50" />
       case "delivered":
-        return <CheckCheck className="h-3 w-3 text-blue-400/80" />
+        return <CheckCheck className="h-3 w-3 text-cyan-400/80" />
       case "failed":
         return <XCircle className="h-3 w-3 text-red-400/90" />
       default:
@@ -343,7 +343,7 @@ function MessageBubble({
   const getChannelRing = () => {
     switch (item.type) {
       case "sms":
-        return "ring-2 ring-blue-400/60"
+        return "ring-2 ring-cyan-400/60"
       case "whatsapp":
         return "ring-2 ring-emerald-400/60"
       case "email":
@@ -361,7 +361,7 @@ function MessageBubble({
     // Glassmorphic outbound bubbles with channel-specific subtle tint
     switch (item.type) {
       case "sms":
-        return "bg-blue-500/[0.08] border border-blue-400/20"
+        return "bg-cyan-500/[0.08] border border-cyan-400/20"
       case "whatsapp":
         return "bg-emerald-500/[0.08] border border-emerald-400/20"
       case "email":
@@ -374,7 +374,7 @@ function MessageBubble({
   const getChannelIcon = () => {
     switch (item.type) {
       case "sms":
-        return <MessageSquare className="h-2.5 w-2.5 text-blue-400" />
+        return <MessageSquare className="h-2.5 w-2.5 text-cyan-400" />
       case "email":
         return <Mail className="h-2.5 w-2.5 text-white/40" />
       case "whatsapp":

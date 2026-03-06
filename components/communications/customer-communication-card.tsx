@@ -34,7 +34,7 @@ export function CustomerCommunicationCard({
   const getActivityIcon = () => {
     switch (customer.last_activity_type) {
       case "sms":
-        return <MessageSquare className="h-3 w-3 text-blue-400" />
+        return <MessageSquare className="h-3 w-3 text-cyan-400" />
       case "email":
         return <Mail className="h-3 w-3 text-white/50" />
       case "whatsapp":
@@ -121,7 +121,7 @@ export function CustomerCommunicationCard({
           {/* Channel indicators + unread */}
           <div className="flex items-center gap-1 mt-1.5">
             {customer.has_sms && (
-              <div className="flex items-center gap-0.5 px-1 py-0.5 rounded bg-blue-400/10 text-blue-400">
+              <div className="flex items-center gap-0.5 px-1 py-0.5 rounded bg-cyan-400/10 text-cyan-400">
                 <MessageSquare className="h-2 w-2" />
                 <span className="text-[9px] font-medium">SMS</span>
               </div>

@@ -195,8 +195,8 @@ export function MobileNav() {
                 }}
                 className="w-full flex items-center gap-4 p-4 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] transition-all active:scale-[0.98] group"
               >
-                <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-500/10 flex items-center justify-center group-hover:from-blue-500/30 group-hover:to-blue-500/20 transition-colors">
-                  <CheckSquare className="h-6 w-6 text-blue-400" />
+                <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-cyan-500/10 flex items-center justify-center group-hover:from-cyan-500/30 group-hover:to-cyan-500/20 transition-colors">
+                  <CheckSquare className="h-6 w-6 text-cyan-400" />
                 </div>
                 <div className="text-left">
                   <p className="font-semibold text-white">New Task</p>
